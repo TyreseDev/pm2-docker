@@ -7,10 +7,10 @@ This repository houses unofficial Docker images for PM2, the advanced, productio
 ## Supported Tags and Respective Dockerfile Links
 
 **Alpine:**
-- `22-alpine`, `latest-alpine`, `latest` - [Alpine Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/22/alpine/Dockerfile)
-- `20-alpine` - [Alpine Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/20/alpine/Dockerfile)
-- `18-alpine` - [Alpine Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/18/alpine/Dockerfile)
-- `16-alpine` - [Alpine Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/16/alpine/Dockerfile)
+- `22`, `22-alpine`, `latest-alpine`, `latest` - [Alpine Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/22/alpine/Dockerfile)
+- `20`, `20-alpine` - [Alpine Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/20/alpine/Dockerfile)
+- `18`, `18-alpine` - [Alpine Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/18/alpine/Dockerfile)
+- `16`, `16-alpine` - [Alpine Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/16/alpine/Dockerfile)
 
 **Bookworm:**
 - `22-bookworm`, `latest-bookworm` - [Bookworm Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/22/bookworm/Dockerfile)
