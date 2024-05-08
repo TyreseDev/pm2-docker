@@ -21,31 +21,27 @@ for version in */ ; do
     for variant in "$version"/* ; do
         variant_name=${variant#*/}  # Extract the variant name
 
-        if [ "$version" = "latest" ] && [ "$variant_name" = "alpine" ]; then
-            # For latest/alpine, tag as latest-alpine, alpine, and latest
-            DOCKER_TAG_LATEST_ALPINE="${USERNAME}/${REPOSITORY}:latest-alpine"
-            DOCKER_TAG_ALPINE="${USERNAME}/${REPOSITORY}:alpine"
-            DOCKER_TAG_LATEST="${USERNAME}/${REPOSITORY}:latest"
-            docker build -t "$DOCKER_TAG_LATEST_ALPINE" -t "$DOCKER_TAG_ALPINE" -t "$DOCKER_TAG_LATEST" "./$variant"
-            echo "Pushing $DOCKER_TAG_LATEST_ALPINE, $DOCKER_TAG_ALPINE and $DOCKER_TAG_LATEST to Docker Hub..."
-            docker push "$DOCKER_TAG_LATEST_ALPINE"
-            docker push "$DOCKER_TAG_ALPINE"
-            docker push "$DOCKER_TAG_LATEST"
-        elif [ "$variant_name" = "alpine" ]; then
-            # For version/alpine, tag as both version-alpine and version
-            DOCKER_TAG_VERSION_ALPINE="${USERNAME}/${REPOSITORY}:${version}-${variant_name}"
-            DOCKER_TAG_VERSION="${USERNAME}/${REPOSITORY}:${version}"
-            docker build -t "$DOCKER_TAG_VERSION_ALPINE" -t "$DOCKER_TAG_VERSION" "./$variant"
-            echo "Pushing $DOCKER_TAG_VERSION_ALPINE and $DOCKER_TAG_VERSION to Docker Hub..."
-            docker push "$DOCKER_TAG_VERSION_ALPINE"
-            docker push "$DOCKER_TAG_VERSION"
-        else
-            # For other variants, just use the version-variant format
-            DOCKER_TAG="${USERNAME}/${REPOSITORY}:${version}-${variant_name}"
-            docker build -t "$DOCKER_TAG" "./$variant"
-            echo "Pushing $DOCKER_TAG to Docker Hub..."
-            docker push "$DOCKER_TAG"
+        if [ "$version" = "latest" ]; then
+            # For latest/variant, tag as variant
+            DOCKER_TAG_VARIANT="${USERNAME}/${REPOSITORY}:${variant_name}"
+            docker build -t "$DOCKER_TAG_VARIANT" "./$variant"
+            echo "Pushing $DOCKER_TAG_VARIANT to Docker Hub..."
+            docker push "$DOCKER_TAG_VARIANT"
         fi
+
+        if [ "$variant_name" = "alpine" ]; then
+            # For version/alpine, tag as version
+            DOCKER_TAG_VERSON="${USERNAME}/${REPOSITORY}:${version}"
+            docker build -t "$DOCKER_TAG_VERSON" "./$variant"
+            echo "Pushing $DOCKER_TAG_VERSON to Docker Hub..."
+            docker push "$DOCKER_TAG_VERSON"
+        fi
+
+        # For other variants, just use the version-variant format
+        DOCKER_TAG="${USERNAME}/${REPOSITORY}:${version}-${variant_name}"
+        docker build -t "$DOCKER_TAG" "./$variant"
+        echo "Pushing $DOCKER_TAG to Docker Hub..."
+        docker push "$DOCKER_TAG"
     done
 done
 

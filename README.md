@@ -7,19 +7,19 @@ This repository houses unofficial Docker images for PM2, the advanced, productio
 ## Supported Tags and Respective Dockerfile Links
 
 **Alpine:**
-- `22`, `22-alpine`, `latest-alpine`, `latest` - [Alpine Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/22/alpine/Dockerfile)
+- `22`, `22-alpine`, `latest-alpine`, `alpine`, `latest` - [Alpine Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/22/alpine/Dockerfile)
 - `20`, `20-alpine` - [Alpine Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/20/alpine/Dockerfile)
 - `18`, `18-alpine` - [Alpine Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/18/alpine/Dockerfile)
 - `16`, `16-alpine` - [Alpine Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/16/alpine/Dockerfile)
 
 **Bookworm:**
-- `22-bookworm`, `latest-bookworm` - [Bookworm Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/22/bookworm/Dockerfile)
+- `22-bookworm`, `latest-bookworm`, `bookworm` - [Bookworm Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/22/bookworm/Dockerfile)
 - `20-bookworm` - [Bookworm Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/20/bookworm/Dockerfile)
 - `18-bookworm` - [Bookworm Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/18/bookworm/Dockerfile)
 - `16-bookworm` - [Bookworm Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/16/bookworm/Dockerfile)
 
 **Slim:**
-- `22-slim`, `latest-slim` - [Slim Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/22/slim/Dockerfile)
+- `22-slim`, `latest-slim`, `slim` - [Slim Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/22/slim/Dockerfile)
 - `20-slim` - [Slim Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/20/slim/Dockerfile)
 - `18-slim` - [Slim Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/18/slim/Dockerfile)
 - `16-slim` - [Slim Dockerfile](https://github.com/TyreseDev/pm2-docker/tree/main/tags/16/slim/Dockerfile)
